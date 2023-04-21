@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* overflow: hidden; */
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            background-color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spinner {
+            width: 200px;
+            aspect-ratio: 1;
+            background-color: transparent;
+            border-radius: 50%;
+            border: solid 20px rgb(215, 215, 215);
+            border-top: solid 20px rgb(72, 0, 255);
+            animation: spin 15s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(3600deg);
+            }
+        }
+
+        .section {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .shadow {
+            width: 200px;
+            aspect-ratio: 1;
+            background-color: white;
+            border-radius: 2rem;
+            box-shadow: 
+                -5px -5px 10px inset #fafbff,
+                5px 5px 10px inset #161b1db7
+        }
+
+        .footer {
+            height: 100vh;
+            width: auto;
+        }
+
+        img {
+            width: 500px;
+            height: auto;
+            position: relative;
+        }
+
+        .hover {
+            contain: "";
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background-color: rgb(151, 151, 151, 0.2);
+            z-index: 1;
+            margin: 5rem;
+            backdrop-filter: blur(8px);
+            /* -webkit-backdrop-filter: blur(8px); */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="spinner"></div>
+    </div>
+    <div class="section">
+        <div class="shadow"></div>
+    </div>
+    <div class="footer">
+        <div class="hover"></div>
+        <img src="./colorful-abstract-3968x2370-9177.png" alt="">
+    </div>
+</body>
+</html>
