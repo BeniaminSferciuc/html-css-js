@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .container {
+                height: 100vh;
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                background-color: #262626;
+            }
+
+            .card {
+                width: 200px;
+                height: 300px;
+                background-image: linear-gradient(85deg, #434343, #262626);
+                border-radius: 10px;
+                transition: 300ms ease-in-out;
+                box-shadow: -2rem 0 3rem -2rem #000;
+            }
+
+            .card + .card {
+                margin-left: -8%;
+            }
+
+            .card:hover {
+                transform: rotate(-6deg);
+            }
+
+            .card:hover ~ .card {
+                z-index: 1;
+                translate: 120px;
+            }
+
+            .circle {
+                margin-top: 0.75rem;
+                margin-left: 0.75rem;
+
+                box-shadow: 1.5px 1.5px 5px rgba(0, 0, 0, 0.507);
+                border-radius: 100rem;
+                width: 50px;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            span {
+                color: black;
+                font-weight: bold;
+                font-family: sans-serif;
+            }
+
+            .main {
+                padding: 1rem;
+                display: none;
+                font-family: Calibri, "Trebuchet MS", sans-serif;
+            }
+
+            h1 {
+                margin-bottom: 0.75rem;
+                color: orangered;
+            }
+
+            .card:hover > div.main {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="card">
+                <div class="circle"><span>1</span></div>
+                <div class="main">
+                    <h1>This is title</h1>
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Expedita similique unde voluptatem pariatur aspernatur?
+                        Alias nemo velit eveniet incidunt perspiciatis!
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="circle"><span>2</span></div>
+                <div class="main">
+                    <h1>This is title</h1>
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Expedita similique unde voluptatem pariatur aspernatur?
+                        Alias nemo velit eveniet incidunt perspiciatis!
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="circle"><span>3</span></div>
+                <div class="main">
+                    <h1>This is title</h1>
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Expedita similique unde voluptatem pariatur aspernatur?
+                        Alias nemo velit eveniet incidunt perspiciatis!
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="circle"><span>4</span></div>
+                <div class="main">
+                    <h1>This is title</h1>
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Expedita similique unde voluptatem pariatur aspernatur?
+                        Alias nemo velit eveniet incidunt perspiciatis!
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="circle"><span>5</span></div>
+                <div class="main">
+                    <h1>This is title</h1>
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Expedita similique unde voluptatem pariatur aspernatur?
+                        Alias nemo velit eveniet incidunt perspiciatis!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
