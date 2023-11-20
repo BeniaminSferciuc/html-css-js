@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --delay: 100ms;
+}
+
+body {
+    margin-inline: auto;
+    font-family: Arial, sans-serif;
+    max-width: 1280px;
+}
+
+.card:nth-child(1) {
+    grid-area: a;
+    animation-delay: calc(1 * var(--delay));
+}
+.card:nth-child(2) {
+    grid-area: b;
+    animation-delay: calc(2 * var(--delay));
+
+}
+.card:nth-child(3) {
+    grid-area: c;
+    animation-delay: calc(3 * var(--delay));
+
+}
+.card:nth-child(4) {
+    grid-area: d;
+    animation-delay: calc(4 * var(--delay));
+
+}
+.card:nth-child(5) {
+    grid-area: e;
+    animation-delay: calc(5 * var(--delay));
+
+}
+.card:nth-child(6) {
+    grid-area: f;
+    animation-delay: calc(6 * var(--delay));
+
+}
+.card:nth-child(7) {
+    grid-area: g;
+    animation-delay: calc(7 * var(--delay));
+
+}
+.card:nth-child(8) {
+    grid-area: h;
+    animation-delay: calc(8 * var(--delay));
+
+}
+.card:nth-child(9) {
+    grid-area: i;
+    animation-delay: calc(9 * var(--delay));
+
+}
+.card:nth-child(10) {
+    grid-area: j;
+    animation-delay: calc(10 * var(--delay));
+
+}
+.card:nth-child(11) {
+    grid-area: k;
+    animation-delay: calc(11 * var(--delay));
+
+}
+.card:nth-child(12) {
+    grid-area: l;
+    animation-delay: calc(12 * var(--delay));
+
+}
+.card:nth-child(13) {
+    grid-area: m;
+    background-color: rgb(14, 4, 45);
+    animation-delay: calc(13 * var(--delay));
+
+}
+
+.container {
+    margin: 1rem;
+    display: grid;
+    gap: 1rem;
+    /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); */
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px; 
+    grid-template-areas: 
+        "a b c d"
+        "e m m f"
+        "g m m h"
+        "i j k l"
+    ;
+}
+
+@keyframes cardEntrace {
+    from {
+        opacity: 0;
+        transform: scale(.3);
+        filter: hue-rotate(180deg)
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: hue-rotate(0deg)
+    }
+}
+
+.card {
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    animation: cardEntrace 700ms ease-in;
+    animation-fill-mode: backwards;
+}
+
