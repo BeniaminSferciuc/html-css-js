@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(213, 213, 213);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+::selection {
+    background-color: turquoise;
+    color: white;
+}
+
+div.card {
+    background-color: transparent;
+    width: 280px;
+    border-radius: 1rem;
+    overflow: hidden;
+    /* box-shadow: 1px 1px 15px rgba(128, 128, 128, 0.386); */
+}
+
+div.card-inner {
+    position: relative;
+    background-color: rgb(233, 233, 233);
+    border-radius: 1rem;
+    height: 100%;
+}
+
+p.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.img-profile {
+    border-radius: 100px;
+    width: 150px;
+    object-fit: cover;
+    object-position: 10% 25%;
+    aspect-ratio: 1/1;
+    margin: 1.5rem 2rem 1rem;
+    transition: all 1s ease;
+}
+
+img.img-profile:hover {
+    border-radius: 1rem;
+    width: 80%;
+}
+
+div.card-profile {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+div.card-profile > :first-child {
+    font-family: "Poppins";
+    font-size: 1.5rem;
+}
+
+div.card-profile > :nth-child(2) {
+    font-family: "Poppins";
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: gray;
+}
+
+div.card-profile > :nth-child(3) {
+    font-family: "Poppins";
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: gray;
+    margin-top: -2.5px;
+}
+
+div.card-followers {
+    color: white;
+    display: flex;
+    font-family: "Poppins";
+    font-size: 0.75rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(20, 19, 19);
+    padding: 0.75rem 1rem;
+}
+
+div.line {
+    height: 35px;
+    width: .1px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+div.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.section span:not(text) {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+div.section span.text {
+    color: gray;
+    font-size: 0.65rem;
+    font-weight: 400;
+}
+
+p.center-btn {
+    text-align: center;
+}
+
+button.btn {
+    margin-top: 1.5rem;
+    border: none;
+    padding: 0.74rem 2.5rem;
+    border-radius: 50px;
+    color: white;
+    font-family: "Poppins";
+    cursor: pointer;
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+    background-size: 300% 100%;
+    transition: all .4s ease-in-out;
+}
+
+button.btn:hover {
+    background-position: 100% 0;
+}
+
+
+p.more {
+    text-align: center;
+    font-size: 0.75rem;
+    font-family: "Poppins";
+    color: gray;
+    padding-block: 1.5rem;
+    cursor: pointer;
+}
+
+.f-container:hover .back-card {
+    top: 0;
+}
+
+div.back-card {
+    background: rgb(181, 204, 204);
+    position: absolute;
+    border-radius: 1rem;
+    padding: 2rem;
+    bottom: 0;
+    top: 100%;
+    transition: top 1s;
+}
+
+h3.about-me {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Poppins";
+    color: rgb(0, 0, 0);
+}
+
+hr {
+    margin-block: 0.75rem;
+    border-radius: 100%;
+}
+
+p.description {
+    color: rgb(0, 0, 0);
+    font-family: "Poppins";
+    font-size: 0.75rem;
+    text-align: justify;
+}
+
+p.back {
+    color: white;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 0.75rem;
+    cursor: pointer;
+    position: relative;
+    top: 100px;
+}
+
+
